@@ -93,7 +93,14 @@ insert into tbFornecedores(nome, email, telCel)
 insert into tbFornecedores(nome, email, telCel)
 	values('Casas Bahia', 'casas.bahia@bahia.com', '11144675');
 insert into tbFuncionarios(nome, email, telCel, dataNasc, salario, sexo)
-	values('Guilherme do grau', 'grau.guigui@moto.com', '1199556655', "2007-02-25", 702000000.00, "f" );
+	values('Guilherme do grau', 'grau.guigui@moto.com', '1199556655', "2007-02-25", 7.00, "f" );
+insert into tbFuncionarios(nome, email, telCel, dataNasc, salario, sexo)
+	values('Shinizi gamepreis', 'voltarocumbole@cpm.com', '1199546645', "2007-05-02", 10.00, "f" );
+insert into tbUsuarios(nome, senha, codFunc)
+	values('Guilherme do grau', 'rgffr', 1);
+insert into tbUsuarios(nome, senha, codFunc)
+	values('Shinizi gamepreis', 'ismsas', 2);
+
 
 
 --visualizando os registros nas tabelas
@@ -102,3 +109,4 @@ insert into tbFuncionarios(nome, email, telCel, dataNasc, salario, sexo)
 select * from tbClientes;
 select * from tbFornecedores;
 select * from tbFuncionarios;
+select * from tbUsuarios;
