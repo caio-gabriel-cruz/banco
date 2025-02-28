@@ -53,10 +53,11 @@ descricao varchar(100),
 quantidade int,
 preco decimal(9,2),
 dataVal datetime,
-lote char(10),
+lote char(10) unique,
 codForn int not null,
 primary key(codProd),
 foreign key(codForn)references tbFornecedores(codForn));
+
 
 create table tbVendas(
 codVend int not null auto_increment,
@@ -100,6 +101,18 @@ insert into tbUsuarios(nome, senha, codFunc)
 	values('Guilherme do grau', 'rgffr', 1);
 insert into tbUsuarios(nome, senha, codFunc)
 	values('Shinizi gamepreis', 'ismsas', 2);
+insert into tbProdutos(descricao, quantidade, preco, dataVal, lote, codForn)
+	values('papel', 10, 22.50, '2007-02-25', '45dgdg5', 1);
+insert into tbProdutos(descricao, quantidade, preco, dataVal, lote, codForn)
+	values('todynho', 20, 2.50, '2007-02-25', '45dgasag5', 2);
+insert into tbProdutos(descricao, quantidade, preco, dataVal, lote, codForn)
+	values('Edynho', 10, 100.50, '2007-02-25', '11dgdg5', 2);
+insert into tbProdutos(descricao, quantidade, preco, dataVal, lote, codForn)
+	values('cupnodes', 20, 5.50, '2007-02-25', '45d34asag5', 2);
+insert into tbVendas(dataVend, horaVend, quantidade, valor, codProd, codUsu, codCli)
+	values('2022-05-20', '10:50:20', 100, 70.00, 2, 1, 1);
+insert into tbVendas(dataVend, horaVend, quantidade, valor, codProd, codUsu, codCli)
+	values('2022-05-20', '10:50:20', 100, 5000.00, 3, 1, 1);
 
 
 
@@ -110,3 +123,5 @@ select * from tbClientes;
 select * from tbFornecedores;
 select * from tbFuncionarios;
 select * from tbUsuarios;
+select * from tbProdutos;
+select * from tbVendas;
